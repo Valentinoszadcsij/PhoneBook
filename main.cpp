@@ -9,13 +9,14 @@ int main()
     while(1)
     {
         std::cout << "Chose a command (ADD, SEARCH, EXIT):\n";
-        std::cin >> command;
+        std::getline(std::cin, command);
+        //std::cin.ignore();
         if (command == "ADD")
             book.add();
         else if (command == "EXIT")
             break ;
         else if (command == "SEARCH")
-            book.contactList(book.entries - 1);
+            book.search();
         else
             std::cout << "Wrong command. Try again\n";
     }

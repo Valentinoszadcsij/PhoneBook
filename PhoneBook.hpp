@@ -3,20 +3,23 @@
 
 #include "Contact.hpp"
 # include <iostream>
+# include <iomanip>
 # include <string>
 
 class PhoneBook
 {
 private:
 	Contact array[8];
+    void    printSearchEntry(std::string str);
 public:
     int	entries;
 	PhoneBook();
 	~PhoneBook();
-	void contactList(int ind);
+	void    search();
 	void	add();
 	//void	search();
 	//void	exit();
+
 };
 
 
